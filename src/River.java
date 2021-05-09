@@ -21,13 +21,13 @@ public class River {
     public void addBridges(int level){
         int otstup = this.h;
         int t = (int)(Math.random() * 7);
-        bridges.add(new Bridge(t * otstup, this.y, otstup));
+        bridges.add(new Bridge((t + 1) * otstup, this.y, otstup, level));
         while (true){
             t = (int)(Math.random() * 7);
-            if (bridges.get(bridges.size() - 1).x + bridges.get(bridges.size() - 1).w > 600){
+            if (bridges.get(bridges.size() - 1).x + 1.5 * bridges.get(bridges.size() - 1).w > 600){
                 break;
             } else {
-                bridges.add(new Bridge(t * otstup + bridges.get(bridges.size() - 1).x, this.y, otstup));
+                bridges.add(new Bridge((t + 1) * otstup +  bridges.get(bridges.size() - 1).x + bridges.get(bridges.size() - 1).w, this.y, otstup, level));
             }
         }
     }

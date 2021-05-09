@@ -6,9 +6,9 @@ import java.io.IOException;
 
 public class InventarPanel {
     public boolean isOn = false;
-    public ClickObject character_01 = new ClickObject(50,50,30,30,ImageIO.read(new File("data//Character_01.jpg")));
-    public ClickObject character_02 = new ClickObject(100,50,30,30,ImageIO.read(new File("data//Character_02.jpg")));
-    public ClickObject character_03 = new ClickObject(150,50,30,30,ImageIO.read(new File("data//Character_03.jpg")));
+    public ClickObject character_01 = new ClickObject(50,50,30,30,ImageIO.read(new File("data//Character//Character (1).png")));
+    public ClickObject character_02 = new ClickObject(100,50,30,30,ImageIO.read(new File("data//Character//Character (2).png")));
+    public ClickObject character_03 = new ClickObject(150,50,30,30,ImageIO.read(new File("data//Character//Character (3).png")));
     public ClickObject exit = new ClickObject(50,100,30,30,ImageIO.read(new File("data//Exit.jpg")));
 
     public InventarPanel() throws IOException {

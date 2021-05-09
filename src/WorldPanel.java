@@ -13,7 +13,9 @@ public class WorldPanel extends JPanel {
     public int roadHeight = 30;
     public int numberOfDeath = 0;
     public boolean needNewLevel = false;
-    public InventarPanel inventarPanel = new InventarPanel();;
+    public InventarPanel inventarPanel = new InventarPanel();
+    public int otstup = 150;
+    public int n = 20;
 
     public WorldPanel(int level) throws IOException {
         this.level = level;
@@ -27,8 +29,7 @@ public class WorldPanel extends JPanel {
         rivers.clear();
         man.start();
         needNewLevel = false;
-        int otstup = 90;
-        int n = 20;
+
         for(int i = 0; i < n; i = i + 1){
             double d1 = Math.random();
             if(d1 > 0.66){
@@ -61,7 +62,7 @@ public class WorldPanel extends JPanel {
     }
     public void CheckKeyEvent(KeyEvent e){
         if (e.getID() == KeyEvent.KEY_PRESSED) {
-            if (e.getKeyCode() == KeyEvent.VK_ESCAPE) {
+            if ((e.getKeyCode() == KeyEvent.VK_ESCAPE)||(e.getKeyCode() == KeyEvent.VK_Q)) {
                 inventarPanel.isOn = !inventarPanel.isOn;
             } else {
                 man.CheckKeyEvent(e);
@@ -69,15 +70,17 @@ public class WorldPanel extends JPanel {
         }
     }
     public void draw(Graphics2D g2d, Painter p){
-
+        p.drawWorld(g2d, level, this);
         for (int i = 0; i < forests.size(); i = i + 1) {
             forests.get(i).draw(g2d, p);
         }
         for (int i = 0; i < roads.size(); i = i + 1) {
             roads.get(i).draw(g2d, p);
         }
-        for (int i = 0; i < rivers.size(); i = i + 1){
-            rivers.get(i).draw(g2d, p);
+        if (rivers != null) {
+            for (int i = 0; i < rivers.size(); i = i + 1) {
+                rivers.get(i).draw(g2d, p);
+            }
         }
         man.draw(g2d, p);
         g2d.setColor(Color.BLACK);
@@ -86,6 +89,7 @@ public class WorldPanel extends JPanel {
         if (inventarPanel.isOn == true){
             inventarPanel.draw(g2d);
         }
+
     }
 
     public void updateState(long dt) {
@@ -108,9 +112,11 @@ public class WorldPanel extends JPanel {
                     }
                 }
             }
-            if (man.y < 35) {
+            if (man.y < 55) {
                 needNewLevel = true;
             }
+            man.x = man.x + 2 * 600;
+            man.x = man.x % 600;
         }
     }
 }

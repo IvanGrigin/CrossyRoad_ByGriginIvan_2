@@ -32,11 +32,13 @@ public class Man {
 
     public void start() {
         x = 300;
-        y = 900;
+        y = 930;
     }
 
     public void draw(Graphics2D g2d, Painter p) {
         p.drawMan(g2d, this);
+        g2d.setColor(Color.MAGENTA);
+        g2d.drawRect((int) x,(int) y,w,h);
     }
 
     public boolean checkCollisionRoad(Road r) {

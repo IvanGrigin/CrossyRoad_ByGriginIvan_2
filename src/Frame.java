@@ -14,7 +14,7 @@ public class Frame extends JFrame implements MouseListener, KeyEventDispatcher {
     public int level;
     public Painter painter;
     public String whichIsOn = "menu";
-    public int numberOfCharacter = 0;
+    public int numberOfCharacter = 1;
     public long previousWorldUpdateTime = System.currentTimeMillis();
 
     public Frame() throws IOException {
@@ -101,7 +101,6 @@ public class Frame extends JFrame implements MouseListener, KeyEventDispatcher {
         }
         if (whichIsOn.equals("menu")) {
             whichIsOn = menuPanel.checkClick(e, whichIsOn);
-            numberOfCharacter = menuPanel.checkClick(e, numberOfCharacter);
         }
         if ((!whichIsOn.equals("world")) && (e.getX() < 100) && (e.getY() < 100)) {
             whichIsOn = "menu";
@@ -119,7 +118,7 @@ public class Frame extends JFrame implements MouseListener, KeyEventDispatcher {
                 worldPanel.man.numberOfImage = s;
             }
         }
-        System.out.println(numberOfCharacter + " " + level + " " + whichIsOn);
+
     }
 
     @Override
