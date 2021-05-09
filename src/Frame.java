@@ -14,7 +14,7 @@ public class Frame extends JFrame implements MouseListener, KeyEventDispatcher {
     public int level;
     public Painter painter;
     public String whichIsOn = "menu";
-    public int numberOfCharacter = 1;
+
     public long previousWorldUpdateTime = System.currentTimeMillis();
 
     public Frame() throws IOException {
@@ -73,7 +73,6 @@ public class Frame extends JFrame implements MouseListener, KeyEventDispatcher {
                 level++;
                 worldPanel.level = level;
                 worldPanel.start();
-
             }
         }
 

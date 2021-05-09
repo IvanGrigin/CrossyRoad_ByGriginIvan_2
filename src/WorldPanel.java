@@ -16,6 +16,7 @@ public class WorldPanel extends JPanel {
     public InventarPanel inventarPanel = new InventarPanel();
     public int otstup = 150;
     public int n = 20;
+    public boolean isGod = false;
 
     public WorldPanel(int level) throws IOException {
         this.level = level;
@@ -67,6 +68,9 @@ public class WorldPanel extends JPanel {
             } else {
                 man.CheckKeyEvent(e);
             }
+            if (e.getKeyCode() == KeyEvent.VK_G){
+                isGod = !isGod;
+            }
         }
     }
     public void draw(Graphics2D g2d, Painter p){
@@ -86,6 +90,7 @@ public class WorldPanel extends JPanel {
         g2d.setColor(Color.BLACK);
         g2d.drawString(""+numberOfDeath, 30,50);
         g2d.drawString("level: " + level, 30,70);
+        g2d.drawString("- Are you God?  - " + isGod, 30, 90);
         if (inventarPanel.isOn == true){
             inventarPanel.draw(g2d);
         }
@@ -100,15 +105,19 @@ public class WorldPanel extends JPanel {
             for (int i = 0; i < roads.size(); i = i + 1) {
                 roads.get(i).updateState(dt);
                 if (man.checkCollisionRoad(roads.get(i))) {
-                    man.start();
-                    numberOfDeath = numberOfDeath + 1;
+                    if (isGod == false) {
+                        man.start();
+                        numberOfDeath = numberOfDeath + 1;
+                    }
                 }
             }
             for (int i = 0; i < rivers.size(); i = i + 1) {
                 if ((man.y >= rivers.get(i).y) && (man.y <= rivers.get(i).y + 10)) {
                     if (man.checkCollisionRiver(rivers.get(i))) {
-                        man.start();
-                        numberOfDeath = numberOfDeath + 1;
+                        if (isGod == false) {
+                            man.start();
+                            numberOfDeath = numberOfDeath + 1;
+                        }
                     }
                 }
             }

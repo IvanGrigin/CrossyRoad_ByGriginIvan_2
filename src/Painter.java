@@ -5,6 +5,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 public class Painter {
+    // Character
+    public ArrayList<Image> characters = new ArrayList<>();
     // Level 01 - 03
     public Image level_0103_background_up = ImageIO.read(new File("data//Level_01-03//Background_up.png"));
     public Image level_0103_background_down = ImageIO.read(new File("data//Level_01-03//Background_down.png"));
@@ -61,8 +63,13 @@ public class Painter {
 
 
     public Painter() throws IOException {
+        // Characters
+        for (int i = 1; i < 10; i++){
+            characters.add(ImageIO.read(new File("data//Character//Character ("+i+").png")));
+        }
+
         // Level 01 - 03
-        for (int i = 1; i < 5; i++){
+        for (int i = 1; i < 10; i++){
             level_0103_cars.add(ImageIO.read(new File("data//Level_01-03//Cars//Car ("+i+").png")));
         }
         for (int i = 1; i < 4; i++){
@@ -70,14 +77,14 @@ public class Painter {
         }
 
         // Level 04 - 06
-        for (int i = 1; i < 5; i++){
+        for (int i = 1; i < 10; i++){
             level_0406_cars.add(ImageIO.read(new File("data//Level_04-06//Cars//Car ("+i+").png")));
         }
         for (int i = 1; i < 4; i++){
             level_0406_forest.add(ImageIO.read(new File("data//Level_04-06//Forest//Forest ("+i+").png")));
         }
         // Level 07 - 09
-        for (int i = 1; i < 5; i++){
+        for (int i = 1; i < 10; i++){
             level_0709_cars.add(ImageIO.read(new File("data//Level_07-09//Cars//Car ("+i+").png")));
         }
         for (int i = 1; i < 4; i++){
@@ -85,7 +92,7 @@ public class Painter {
         }
 
         // Level 10 - 12
-        for (int i = 1; i < 5; i++){
+        for (int i = 1; i < 10; i++){
             level_1012_cars.add(ImageIO.read(new File("data//Level_10-12//Cars//Car ("+i+").png")));
         }
         for (int i = 1; i < 4; i++){
@@ -93,7 +100,7 @@ public class Painter {
         }
 
         // Level 13 - 15
-        for (int i = 1; i < 5; i++){
+        for (int i = 1; i < 10; i++){
             level_1315_cars.add(ImageIO.read(new File("data//Level_13-15//Cars//Car ("+i+").png")));
         }
         for (int i = 1; i < 4; i++){
@@ -101,7 +108,7 @@ public class Painter {
         }
 
         // Level 16 - 18
-        for (int i = 1; i < 5; i++){
+        for (int i = 1; i < 10; i++){
             level_1618_cars.add(ImageIO.read(new File("data//Level_16-18//Cars//Car ("+i+").png")));
         }
         for (int i = 1; i < 4; i++){
@@ -113,14 +120,9 @@ public class Painter {
 
 
     public void drawMan(Graphics2D g2d, Man man){
-        if (man.numberOfImage.equals("01")) {
-            g2d.setColor(Color.RED);
-        } else if (man.numberOfImage.equals("02")){
-            g2d.setColor(Color.YELLOW);
-        } else {
-            g2d.setColor(Color.BLACK);
-        }
-        g2d.fillOval(man.x, man.y, man.w, man.h);
+        int p = Integer.parseInt(man.numberOfImage) - 1;
+        Image test = characters.get(p);
+        g2d.drawImage(test, man.x, man.y, man.w, man.h, null);
     }
     public void drawRoad(Graphics2D g2d, Road road){
         int level = road.level;
