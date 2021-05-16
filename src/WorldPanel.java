@@ -94,7 +94,6 @@ public class WorldPanel extends JPanel {
         if (inventarPanel.isOn == true){
             inventarPanel.draw(g2d);
         }
-
     }
 
     public void updateState(long dt) {

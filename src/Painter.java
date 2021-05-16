@@ -26,7 +26,7 @@ public class Painter {
     public ArrayList<Image> level_0406_forest = new ArrayList<>();
 
     // Level 07 - 09
-    public Image level_0709_background_up = ImageIO.read(new File("data//Level_07-09//Background_up.png"));
+    public Image level_0709_background_up = ImageIO.read(new File("data//Level_07-09//Background_up1.png"));
     public Image level_0709_background_down = ImageIO.read(new File("data//Level_07-09//Background_down.png"));
     public Image level_0709_river = ImageIO.read(new File("data//Level_07-09//River.png"));
     public Image level_0709_bridge = ImageIO.read(new File("data//Level_07-09//Bridge.png"));
@@ -141,7 +141,14 @@ public class Painter {
         } else {
             test = level_1618_road;
         }
-        g2d.drawImage(test, road.x, road.y, road.w, road.h, null);
+        int k = 0;
+        while (true){
+            g2d.drawImage(test, road.x + k * road.h, road.y, road.h, road.h, null);
+            k++;
+            if (road.x + road.h * k > 800){
+                break;
+            }
+        }
         for(int i = 0; i < road.cars.size(); i++){
             drawCar(g2d, road.cars.get(i), road.speed);
         }
@@ -274,7 +281,7 @@ public class Painter {
             test_down = level_1618_background_down;
         }
 
-        g2d.drawImage(test_up, 0,0,600,w.otstup,null);
+        g2d.drawImage(test_up, 0,20,600,w.otstup - 20,null);
         int t = w.roads.size() + w.forests.size() + w.rivers.size();
         g2d.drawImage(test_down, 0,w.otstup + t * 30, 600,100,null);
     }

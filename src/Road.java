@@ -39,7 +39,7 @@ public class Road {
         } else if (level <= 15) {
             minSpeed = 0.06 + dv;
         } else {
-            minSpeed = 0.13 + dv;
+            minSpeed = 0.13 + dv + 0.0035 * level;
         }
         speed = sign*(minSpeed + Math.random()*5/1000);
     }
@@ -48,17 +48,17 @@ public class Road {
         cars.add(new Car(Math.random() * otstup, this.y, level));
         while (true) {
             if (level <= 3) {
-                cars.add(new Car((Math.random()+2) * otstup + cars.get(cars.size()-1).x + cars.get(cars.size()-1).w, this.y, level));
+                cars.add(new Car((Math.random()+1) * otstup + cars.get(cars.size()-1).x + cars.get(cars.size()-1).w, this.y, level));
             } else if (level <= 6) {
-                cars.add(new Car((Math.random()+7) * otstup + cars.get(cars.size()-1).x + cars.get(cars.size()-1).w, this.y, level));
+                cars.add(new Car((Math.random()+1.5) * otstup + cars.get(cars.size()-1).x + cars.get(cars.size()-1).w, this.y, level));
             } else if (level <= 9) {
-                cars.add(new Car((Math.random()+3) * otstup + cars.get(cars.size()-1).x + cars.get(cars.size()-1).w, this.y, level));
+                cars.add(new Car((Math.random()+2.5) * otstup + cars.get(cars.size()-1).x + cars.get(cars.size()-1).w, this.y, level));
             } else if (level <= 12) {
-                cars.add(new Car((Math.random()+4) * otstup + cars.get(cars.size()-1).x + cars.get(cars.size()-1).w, this.y, level));
+                cars.add(new Car((Math.random()+3) * otstup + cars.get(cars.size()-1).x + cars.get(cars.size()-1).w, this.y, level));
             } else if (level <= 15) {
-                cars.add(new Car((Math.random()+5) * otstup + cars.get(cars.size()-1).x + cars.get(cars.size()-1).w, this.y, level));
+                cars.add(new Car((Math.random()+4) * otstup + cars.get(cars.size()-1).x + cars.get(cars.size()-1).w, this.y, level));
             } else {
-                cars.add(new Car((Math.random()+7) * otstup + cars.get(cars.size()-1).x + cars.get(cars.size()-1).w, this.y, level));
+                cars.add(new Car((Math.random()+4.7) * otstup + cars.get(cars.size()-1).x + cars.get(cars.size()-1).w, this.y, level));
             }
             if (cars.get(cars.size()-1).x + 3 * cars.get(cars.size()-1).w > this.w){
                 break;

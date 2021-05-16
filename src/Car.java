@@ -15,7 +15,7 @@ public class Car {
         this.y = y;
         number = (int) (Math.random() * 9);
         int k = (int) (Math.random() * 10);
-        w = 50 + k;
+        w = 75 + k;
         h = 30;
     }
     public void draw(Graphics2D g2d, Painter p){
