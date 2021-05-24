@@ -101,8 +101,13 @@ public class Frame extends JFrame implements MouseListener, KeyEventDispatcher {
         if (whichIsOn.equals("menu")) {
             whichIsOn = menuPanel.checkClick(e, whichIsOn);
         }
-        if ((!whichIsOn.equals("world")) && (e.getX() < 100) && (e.getY() < 100)) {
-            whichIsOn = "menu";
+        if ((whichIsOn.equals("choice"))){
+            if ((e.getX() < 200) && (e.getY() < 150)) {
+                whichIsOn = "menu";
+            }
+            if ((e.getX() > 400) && (e.getY() < 150)) {
+                whichIsOn = "world";
+            }
         }
         if ((whichIsOn.equals("world")) && (worldPanel.inventarPanel.isOn)) {
             String s = worldPanel.inventarPanel.checkClick(e);

@@ -5,12 +5,13 @@ import java.io.File;
 import java.io.IOException;
 
 public class ChoicePanel {
-
-    public ClickObject choice_01 = new ClickObject(50,100,500,100,ImageIO.read(new File("data//Level_01-03//Start_Image.jpg")));
-    public ClickObject choice_04 = new ClickObject(50,280,500,100,ImageIO.read(new File("data//Level_04-06//Start_Image.jpg")));
-    public ClickObject choice_07 = new ClickObject(50,460,500,100,ImageIO.read(new File("data//Level_07-09//Start_Image.jpg")));
-    public ClickObject choice_10 = new ClickObject(50,640,500,100,ImageIO.read(new File("data//Level_10-12//Start_Image.jpg")));
-    public ClickObject choice_13 = new ClickObject(50,820,500,100,ImageIO.read(new File("data//Level_13-15//Start_Image.jpg")));
+    public ClickObject back_to_menu = new ClickObject(0,0,200,150, ImageIO.read(new File("data//Menu.jpg")));
+    public ClickObject go_to_game = new ClickObject(400,0,200,150, ImageIO.read(new File("data//Start.jpg")));
+    public ClickObject choice_01 = new ClickObject(50,200,500,100,ImageIO.read(new File("data//Level_01-03//Start_Image.png")));
+    public ClickObject choice_04 = new ClickObject(50,350,500,100,ImageIO.read(new File("data//Level_04-06//Start_Image.png")));
+    public ClickObject choice_07 = new ClickObject(50,500,500,100,ImageIO.read(new File("data//Level_07-09//Start_Image.png")));
+    public ClickObject choice_10 = new ClickObject(50,650,500,100,ImageIO.read(new File("data//Level_10-12//Start_Image.png")));
+    public ClickObject choice_13 = new ClickObject(50,800,500,100,ImageIO.read(new File("data//Level_13-15//Start_Image.png")));
 
     public ChoicePanel() throws IOException {
 
@@ -38,6 +39,9 @@ public class ChoicePanel {
     public void draw(Graphics2D g2d, Painter p){
         g2d.setColor(new Color(100,200,200));
         g2d.fillRect(0,0,600,1000);
+
+        back_to_menu.draw(g2d);
+        go_to_game.draw(g2d);
 
         choice_01.draw(g2d);
         choice_04.draw(g2d);
