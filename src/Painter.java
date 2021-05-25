@@ -12,6 +12,7 @@ public class Painter {
     public Image level_0103_background_down = ImageIO.read(new File("data//Level_01-03//Background_down.png"));
     public Image level_0103_river = ImageIO.read(new File("data//Level_01-03//River.png"));
     public Image level_0103_bridge = ImageIO.read(new File("data//Level_01-03//Bridge.png"));
+    public Image level_0103_lily = ImageIO.read(new File("data//Level_01-03//Lily.png"));
     public Image level_0103_road = ImageIO.read(new File("data//Level_01-03//Road.png"));
     public ArrayList<Image> level_0103_cars = new ArrayList<>();
     public ArrayList<Image> level_0103_forest = new ArrayList<>();
@@ -21,6 +22,7 @@ public class Painter {
     public Image level_0406_background_down = ImageIO.read(new File("data//Level_04-06//Background_down.png"));
     public Image level_0406_river = ImageIO.read(new File("data//Level_04-06//River.png"));
     public Image level_0406_bridge = ImageIO.read(new File("data//Level_04-06//Bridge.png"));
+    public Image level_0406_lily = ImageIO.read(new File("data//Level_01-03//Lily.png"));
     public Image level_0406_road = ImageIO.read(new File("data//Level_04-06//Road.png"));
     public ArrayList<Image> level_0406_cars = new ArrayList<>();
     public ArrayList<Image> level_0406_forest = new ArrayList<>();
@@ -30,6 +32,7 @@ public class Painter {
     public Image level_0709_background_down = ImageIO.read(new File("data//Level_07-09//Background_down.png"));
     public Image level_0709_river = ImageIO.read(new File("data//Level_07-09//River.png"));
     public Image level_0709_bridge = ImageIO.read(new File("data//Level_07-09//Bridge.png"));
+    public Image level_0709_lily = ImageIO.read(new File("data//Level_07-09//Lily.png"));
     public Image level_0709_road = ImageIO.read(new File("data//Level_07-09//Road.png"));
     public ArrayList<Image> level_0709_cars = new ArrayList<>();
     public ArrayList<Image> level_0709_forest = new ArrayList<>();
@@ -39,6 +42,7 @@ public class Painter {
     public Image level_1012_background_down = ImageIO.read(new File("data//Level_10-12//Background_down.png"));
     public Image level_1012_river = ImageIO.read(new File("data//Level_10-12//River.png"));
     public Image level_1012_bridge = ImageIO.read(new File("data//Level_10-12//Bridge.png"));
+    public Image level_1012_lily = ImageIO.read(new File("data//Level_10-12//Lily.png"));
     public Image level_1012_road = ImageIO.read(new File("data//Level_10-12//Road.png"));
     public ArrayList<Image> level_1012_cars = new ArrayList<>();
     public ArrayList<Image> level_1012_forest = new ArrayList<>();
@@ -48,6 +52,7 @@ public class Painter {
     public Image level_1315_background_down = ImageIO.read(new File("data//Level_13-15//Background_down.png"));
     public Image level_1315_river = ImageIO.read(new File("data//Level_13-15//River.png"));
     public Image level_1315_bridge = ImageIO.read(new File("data//Level_13-15//Bridge.png"));
+    public Image level_1315_lily = ImageIO.read(new File("data//Level_13-15//Lily.png"));
     public Image level_1315_road = ImageIO.read(new File("data//Level_13-15//Road.png"));
     public ArrayList<Image> level_1315_cars = new ArrayList<>();
     public ArrayList<Image> level_1315_forest = new ArrayList<>();
@@ -57,6 +62,7 @@ public class Painter {
     public Image level_1618_background_down = ImageIO.read(new File("data//Level_16-18//Background_down.png"));
     public Image level_1618_river = ImageIO.read(new File("data//Level_16-18//River.png"));
     public Image level_1618_bridge = ImageIO.read(new File("data//Level_16-18//Bridge.png"));
+    public Image level_1618_lily = ImageIO.read(new File("data//Level_16-18//Lily.png"));
     public Image level_1618_road = ImageIO.read(new File("data//Level_16-18//Road.png"));
     public ArrayList<Image> level_1618_cars = new ArrayList<>();
     public ArrayList<Image> level_1618_forest = new ArrayList<>();
@@ -122,7 +128,7 @@ public class Painter {
     public void drawMan(Graphics2D g2d, Man man){
         int p = Integer.parseInt(man.numberOfImage) - 1;
         Image test = characters.get(p);
-        g2d.drawImage(test, man.x, man.y, man.w, man.h, null);
+        g2d.drawImage(test, (int) man.x, man.y, man.w, man.h, null);
     }
     public void drawRoad(Graphics2D g2d, Road road){
         int level = road.level;
@@ -257,6 +263,57 @@ public class Painter {
         }
 
         g2d.drawImage(test, bridge.x, bridge.y, bridge.w, bridge.h, null);
+    }
+    public void drawWaterLilyRiver(Graphics2D g2d, WaterLilyRiver waterLilyRiver){
+        int level = waterLilyRiver.level;
+        Image test;
+
+        if (level <= 3){
+            test = level_0103_river;
+        } else if (level <= 6) {
+            test = level_0406_river;
+        } else if (level <= 9) {
+            test = level_0709_river;
+        } else if (level <= 12) {
+            test = level_1012_river;
+        } else if (level <= 15) {
+            test = level_1315_river;
+        } else {
+            test = level_1618_river;
+        }
+        int k = 0;
+        while (true){
+            g2d.drawImage(test, waterLilyRiver.x + k  * waterLilyRiver.w, waterLilyRiver.y, waterLilyRiver.w, waterLilyRiver.h, null);
+            k++;
+            if (waterLilyRiver.x + waterLilyRiver.h * k > 800){
+                break;
+            }
+        }
+        for (int i = 0; i < waterLilyRiver.waterLilies.size(); i++){
+            drawWaterLily(g2d, waterLilyRiver.waterLilies.get(i));
+        }
+        g2d.drawString("lily", (int) waterLilyRiver.x + 5, (int) waterLilyRiver.y);
+
+    }
+    public void drawWaterLily(Graphics2D g2d, WaterLily waterLily) {
+        int level = waterLily.level;
+        Image test;
+
+        if (level <= 3) {
+            test = level_0103_lily;
+        } else if (level <= 6) {
+            test = level_0406_lily;
+        } else if (level <= 9) {
+            test = level_0709_lily;
+        } else if (level <= 12) {
+            test = level_1012_lily;
+        } else if (level <= 15) {
+            test = level_1315_lily;
+        } else {
+            test = level_1618_lily;
+        }
+        g2d.drawImage(test, (int) waterLily.x, (int) waterLily.y, waterLily.w, waterLily.h, null);
+
     }
     public void drawWorld(Graphics2D g2d, int level, WorldPanel w){
         Image test_up;

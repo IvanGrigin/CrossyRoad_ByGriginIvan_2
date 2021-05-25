@@ -10,8 +10,13 @@ public class WaterLily {
     public WaterLily(double x, double y, double speed){
         this.x = x;
         this.y = y;
-        this.w = 30;
+        this.w = 35;
         this.h = 30;
+    }
+    public void updateState(double speed0, int w0, long dt){
+        if(x > w0){ x = x - w0; }
+        if(x < 0){ x = x + w0; }
+        this.x += speed0 * dt;
     }
 
 
