@@ -78,6 +78,9 @@ public class Painter {
         for (int i = 1; i < 10; i++){
             level_0103_cars.add(ImageIO.read(new File("data//Level_01-03//Cars//Car ("+i+").png")));
         }
+        for (int i = 10; i < 50; i++){
+            level_0103_cars.add(ImageIO.read(new File("data//Level_01-03//Cars//Car ("+i+").png")));
+        }
         for (int i = 1; i < 4; i++){
             level_0103_forest.add(ImageIO.read(new File("data//Level_01-03//Forest//Forest ("+i+").png")));
         }
@@ -86,11 +89,17 @@ public class Painter {
         for (int i = 1; i < 10; i++){
             level_0406_cars.add(ImageIO.read(new File("data//Level_04-06//Cars//Car ("+i+").png")));
         }
+        for (int i = 10; i < 50; i++){
+            level_0406_cars.add(ImageIO.read(new File("data//Level_04-06//Cars//Car ("+i+").png")));
+        }
         for (int i = 1; i < 4; i++){
             level_0406_forest.add(ImageIO.read(new File("data//Level_04-06//Forest//Forest ("+i+").png")));
         }
         // Level 07 - 09
         for (int i = 1; i < 10; i++){
+            level_0709_cars.add(ImageIO.read(new File("data//Level_07-09//Cars//Car ("+i+").png")));
+        }
+        for (int i = 10; i < 50; i++){
             level_0709_cars.add(ImageIO.read(new File("data//Level_07-09//Cars//Car ("+i+").png")));
         }
         for (int i = 1; i < 4; i++){
@@ -101,6 +110,9 @@ public class Painter {
         for (int i = 1; i < 10; i++){
             level_1012_cars.add(ImageIO.read(new File("data//Level_10-12//Cars//Car ("+i+").png")));
         }
+        for (int i = 10; i < 50; i++){
+            level_1012_cars.add(ImageIO.read(new File("data//Level_10-12//Cars//Car ("+i+").png")));
+        }
         for (int i = 1; i < 4; i++){
             level_1012_forest.add(ImageIO.read(new File("data//Level_10-12//Forest//Forest ("+i+").png")));
         }
@@ -109,12 +121,18 @@ public class Painter {
         for (int i = 1; i < 10; i++){
             level_1315_cars.add(ImageIO.read(new File("data//Level_13-15//Cars//Car ("+i+").png")));
         }
+        for (int i = 10; i < 50; i++){
+            level_1315_cars.add(ImageIO.read(new File("data//Level_13-15//Cars//Car ("+i+").png")));
+        }
         for (int i = 1; i < 4; i++){
             level_1315_forest.add(ImageIO.read(new File("data//Level_13-15//Forest//Forest ("+i+").png")));
         }
 
         // Level 16 - 18
         for (int i = 1; i < 10; i++){
+            level_1618_cars.add(ImageIO.read(new File("data//Level_16-18//Cars//Car ("+i+").png")));
+        }
+        for (int i = 10; i < 50; i++){
             level_1618_cars.add(ImageIO.read(new File("data//Level_16-18//Cars//Car ("+i+").png")));
         }
         for (int i = 1; i < 4; i++){
@@ -336,8 +354,8 @@ public class Painter {
             test_down = level_1618_background_down;
         }
 
-        g2d.drawImage(test_up, 0,20,600,w.otstup - 20,null);
+        g2d.drawImage(test_up, -10,20,610,w.otstup - 20,null);
         int t = w.roads.size() + w.forests.size() + w.rivers.size();
-        g2d.drawImage(test_down, 0,w.otstup + t * 30, 600,100,null);
+        g2d.drawImage(test_down, -10,w.otstup + t * 30, 610,200,null);
     }
 }

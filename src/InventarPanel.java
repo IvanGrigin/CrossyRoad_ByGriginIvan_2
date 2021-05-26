@@ -15,7 +15,7 @@ public class InventarPanel {
     public ClickObject character_07 = new ClickObject(350,50,30,30,ImageIO.read(new File("data//Character//Character (7).png")));
     public ClickObject character_08 = new ClickObject(400,50,30,30,ImageIO.read(new File("data//Character//Character (8).png")));
     public ClickObject character_09 = new ClickObject(450,50,30,30,ImageIO.read(new File("data//Character//Character (9).png")));
-    public ClickObject exit = new ClickObject(50,100,30,30,ImageIO.read(new File("data//Exit.jpg")));
+    public ClickObject exit = new ClickObject(150,100,250,130,ImageIO.read(new File("data//Menu.png")));
 
     public InventarPanel() throws IOException {
     }
@@ -32,9 +32,9 @@ public class InventarPanel {
         else if (exit.checkClick(e)) return "exit";
         else return "";
     }
-    public void draw(Graphics2D g2d){
-        g2d.setColor(Color.YELLOW);
-        g2d.fillRect(0,0,600,200);
+    public void draw(Graphics2D g2d, int level){
+        g2d.setColor(new Color( 100,200,200));
+        g2d.fillRect(0,0,600,250);
         character_01.draw(g2d);
         character_02.draw(g2d);
         character_03.draw(g2d);
@@ -45,5 +45,7 @@ public class InventarPanel {
         character_08.draw(g2d);
         character_09.draw(g2d);
         exit.draw(g2d);
+        g2d.setColor(Color.YELLOW);
+        g2d.drawString("Your level: " + level, 20, 150);
     }
 }

@@ -5,8 +5,8 @@ import java.io.File;
 import java.io.IOException;
 
 public class ChoicePanel {
-    public ClickObject back_to_menu = new ClickObject(0,0,200,150, ImageIO.read(new File("data//Menu.jpg")));
-    public ClickObject go_to_game = new ClickObject(400,0,200,150, ImageIO.read(new File("data//Start.jpg")));
+    public ClickObject back_to_menu = new ClickObject(20,35,250,150, ImageIO.read(new File("data//Menu.png")));
+    public ClickObject go_to_game = new ClickObject(330,35,250,150, ImageIO.read(new File("data//Start.png")));
     public ClickObject choice_01 = new ClickObject(50,200,500,100,ImageIO.read(new File("data//Level_01-03//Start_Image.png")));
     public ClickObject choice_04 = new ClickObject(50,350,500,100,ImageIO.read(new File("data//Level_04-06//Start_Image.png")));
     public ClickObject choice_07 = new ClickObject(50,500,500,100,ImageIO.read(new File("data//Level_07-09//Start_Image.png")));

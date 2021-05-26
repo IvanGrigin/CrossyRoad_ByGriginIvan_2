@@ -13,7 +13,7 @@ public class Car {
         this.level = level;
         this.x = x;
         this.y = y;
-        number = (int) (Math.random() * 9);
+        number = (int) (Math.random() * 45);
         int k = (int) (Math.random() * 10);
         w = 75 + k;
         h = 30;
