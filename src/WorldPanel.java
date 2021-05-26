@@ -104,13 +104,10 @@ public class WorldPanel extends JPanel {
                 waterLilyRivers.get(i).draw(g2d, p, isContour);
             }
         }
-        man.draw(g2d, p, isContour);
+        man.draw(g2d, p, isContour, isGod);
         g2d.setColor(Color.BLACK);
-        g2d.drawString("" + numberOfDeath, 30, 50);
-        g2d.drawString("level: " + level, 30, 70);
-        g2d.drawString("- Are you God?  - " + isGod, 30, 90);
-        if (inventarPanel.isOn == true) {
-            inventarPanel.draw(g2d);
+          if (inventarPanel.isOn == true) {
+            inventarPanel.draw(g2d, level);
         }
     }
 

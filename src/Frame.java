@@ -29,6 +29,7 @@ public class Frame extends JFrame implements MouseListener, KeyEventDispatcher {
         this.setSize(600, 1000);
         this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         this.setVisible(true);
+        this.setResizable(false);
 
         KeyboardFocusManager manager = KeyboardFocusManager.getCurrentKeyboardFocusManager();
         manager.addKeyEventDispatcher(this);

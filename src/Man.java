@@ -45,8 +45,14 @@ public class Man {
         y = 930;
     }
 
-    public void draw(Graphics2D g2d, Painter p, boolean b) {
+    public void draw(Graphics2D g2d, Painter p, boolean b, boolean isGod) {
         p.drawMan(g2d, this, b);
+        if (isGod == true){
+            g2d.setColor(Color.YELLOW);
+            g2d.drawOval((int) (x-10), (int) (y-10), w + 20, h + 20);
+            g2d.drawOval((int) (x-11), (int) (y-11), w + 22, h + 22);
+            g2d.drawOval((int) (x-12), (int) (y-12), w + 24, h + 24);
+        }
     }
 
     public boolean checkCollisionRoad(Road r) {
