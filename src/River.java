@@ -31,7 +31,7 @@ public class River {
             }
         }
     }
-    public void draw(Graphics2D g2d, Painter p){
-        p.drawRiver(g2d, this);
+    public void draw(Graphics2D g2d, Painter p, boolean b){
+        p.drawRiver(g2d, this, b);
     }
 }

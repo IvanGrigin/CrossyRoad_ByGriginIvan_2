@@ -18,6 +18,7 @@ public class WorldPanel extends JPanel {
     public int otstup = 150;
     public int n = 20;
     public boolean isGod = false;
+    public boolean isContour = false;
 
     public WorldPanel(int level) throws IOException {
         this.level = level;
@@ -79,28 +80,31 @@ public class WorldPanel extends JPanel {
             if (e.getKeyCode() == KeyEvent.VK_G) {
                 isGod = !isGod;
             }
+            if (e.getKeyCode() == KeyEvent.VK_C){
+                isContour = !isContour;
+            }
         }
     }
 
     public void draw(Graphics2D g2d, Painter p) {
         p.drawWorld(g2d, level, this);
         for (int i = 0; i < forests.size(); i = i + 1) {
-            forests.get(i).draw(g2d, p);
+            forests.get(i).draw(g2d, p, isContour);
         }
         for (int i = 0; i < roads.size(); i = i + 1) {
-            roads.get(i).draw(g2d, p);
+            roads.get(i).draw(g2d, p, isContour);
         }
         if (rivers != null) {
             for (int i = 0; i < rivers.size(); i = i + 1) {
-                rivers.get(i).draw(g2d, p);
+                rivers.get(i).draw(g2d, p, isContour);
             }
         }
         if (waterLilyRivers != null) {
             for (int i = 0; i < waterLilyRivers.size(); i = i + 1) {
-                waterLilyRivers.get(i).draw(g2d, p);
+                waterLilyRivers.get(i).draw(g2d, p, isContour);
             }
         }
-        man.draw(g2d, p);
+        man.draw(g2d, p, isContour);
         g2d.setColor(Color.BLACK);
         g2d.drawString("" + numberOfDeath, 30, 50);
         g2d.drawString("level: " + level, 30, 70);

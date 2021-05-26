@@ -19,7 +19,7 @@ public class Car {
         h = 30;
     }
     public void draw(Graphics2D g2d, Painter p){
-        p.drawCar(g2d, this, speed);
+        //p.drawCar(g2d, this, speed);
         g2d.setColor(Color.MAGENTA);
         g2d.drawRect((int) x,(int) y,w,h);
     }

@@ -70,7 +70,7 @@ public class Road {
             cars.get(i).updateState(speed, this.w, dt);
         }
     }
-    public void draw(Graphics2D g2d, Painter p){
-        p.drawRoad(g2d, this);
+    public void draw(Graphics2D g2d, Painter p, boolean b){
+        p.drawRoad(g2d, this, b);
     }
 }

@@ -40,7 +40,7 @@ public class WaterLilyRiver {
             waterLilies.get(i).updateState(speed, this.w, dt);
         }
     }
-    public void draw(Graphics2D g2d, Painter p){
-        p.drawWaterLilyRiver(g2d, this);
+    public void draw(Graphics2D g2d, Painter p, boolean b){
+        p.drawWaterLilyRiver(g2d, this, b);
     }
 }

@@ -125,12 +125,16 @@ public class Painter {
 
 
 
-    public void drawMan(Graphics2D g2d, Man man){
+    public void drawMan(Graphics2D g2d, Man man, boolean b){
         int p = Integer.parseInt(man.numberOfImage) - 1;
         Image test = characters.get(p);
         g2d.drawImage(test, (int) man.x, man.y, man.w, man.h, null);
+        if (b == true){
+            g2d.setColor(Color.MAGENTA);
+            g2d.drawRect( (int) man.x, man.y, man.w, man.h);
+        }
     }
-    public void drawRoad(Graphics2D g2d, Road road){
+    public void drawRoad(Graphics2D g2d, Road road, boolean b){
         int level = road.level;
         Image test;
 
@@ -156,10 +160,10 @@ public class Painter {
             }
         }
         for(int i = 0; i < road.cars.size(); i++){
-            drawCar(g2d, road.cars.get(i), road.speed);
+            drawCar(g2d, road.cars.get(i), road.speed, b);
         }
     }
-    public void drawCar(Graphics2D g2d, Car car, double speed){
+    public void drawCar(Graphics2D g2d, Car car, double speed, boolean b){
         int level = car.level;
         Image test;
 
@@ -185,37 +189,33 @@ public class Painter {
             g2d.drawImage(test, (int) car.x + car.w - 600, (int) car.y, -car.w, car.h, null);
             g2d.drawImage(test, (int) car.x + car.w + 600, (int) car.y, -car.w, car.h, null);
         }
-        g2d.setColor(Color.MAGENTA);
-        g2d.drawRect((int) car.x,(int) car.y,car.w,car.h);
+        if (b == true) {
+            g2d.setColor(Color.MAGENTA);
+            g2d.drawRect((int) car.x, (int) car.y, car.w, car.h);
+        }
     }
-    public void drawForest(Graphics2D g2d, Forest forest){
+    public void drawForest(Graphics2D g2d, Forest forest, boolean b){
         int level = forest.level;
-        Image test;
-
-        if (level <= 3){
-            test = level_0103_forest.get(forest.number);
-        } else if (level <= 6) {
-            test = level_0406_forest.get(forest.number);
-        } else if (level <= 9) {
-            test = level_0709_forest.get(forest.number);
-        } else if (level <= 12) {
-            test = level_1012_forest.get(forest.number);
-        } else if (level <= 15) {
-            test = level_1315_forest.get(forest.number);
-        } else {
-            test = level_1618_forest.get(forest.number);
-        }
-
-        int k = 0;
-        while (true){
-            g2d.drawImage(test, forest.x + k * forest.h, forest.y, forest.h, forest.h, null);
-            k++;
-            if (forest.x + forest.h * k > 800){
-                break;
+        for (int i = 0; i < forest.numberOfForest.size(); i = i + 1) {
+            Image test;
+            int q = forest.numberOfForest.get(i);
+            if (level <= 3) {
+                test = level_0103_forest.get(q);
+            } else if (level <= 6) {
+                test = level_0406_forest.get(q);
+            } else if (level <= 9) {
+                test = level_0709_forest.get(q);
+            } else if (level <= 12) {
+                test = level_1012_forest.get(q);
+            } else if (level <= 15) {
+                test = level_1315_forest.get(q);
+            } else {
+                test = level_1618_forest.get(q);
             }
+            g2d.drawImage(test, forest.x + i * forest.h, forest.y, forest.h, forest.h, null);
         }
     }
-    public void drawRiver(Graphics2D g2d, River river){
+    public void drawRiver(Graphics2D g2d, River river, boolean b){
         int level = river.level;
         Image test;
 
@@ -264,7 +264,7 @@ public class Painter {
 
         g2d.drawImage(test, bridge.x, bridge.y, bridge.w, bridge.h, null);
     }
-    public void drawWaterLilyRiver(Graphics2D g2d, WaterLilyRiver waterLilyRiver){
+    public void drawWaterLilyRiver(Graphics2D g2d, WaterLilyRiver waterLilyRiver, boolean b){
         int level = waterLilyRiver.level;
         Image test;
 
@@ -292,8 +292,6 @@ public class Painter {
         for (int i = 0; i < waterLilyRiver.waterLilies.size(); i++){
             drawWaterLily(g2d, waterLilyRiver.waterLilies.get(i));
         }
-        g2d.drawString("lily", (int) waterLilyRiver.x + 5, (int) waterLilyRiver.y);
-
     }
     public void drawWaterLily(Graphics2D g2d, WaterLily waterLily) {
         int level = waterLily.level;
