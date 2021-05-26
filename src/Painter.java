@@ -28,7 +28,7 @@ public class Painter {
     public ArrayList<Image> level_0406_forest = new ArrayList<>();
 
     // Level 07 - 09
-    public Image level_0709_background_up = ImageIO.read(new File("data//Level_07-09//Background_up1.png"));
+    public Image level_0709_background_up = ImageIO.read(new File("data//Level_07-09//Background_up.png"));
     public Image level_0709_background_down = ImageIO.read(new File("data//Level_07-09//Background_down.png"));
     public Image level_0709_river = ImageIO.read(new File("data//Level_07-09//River.png"));
     public Image level_0709_bridge = ImageIO.read(new File("data//Level_07-09//Bridge.png"));

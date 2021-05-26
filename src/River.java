@@ -14,7 +14,7 @@ public class River {
         this.y = y;
         this.w = 600;
         this.h = h;
-
+        this.level = level;
         bridges = new ArrayList<>();
         addBridges(level);
     }
