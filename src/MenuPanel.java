@@ -6,7 +6,7 @@ import java.io.File;
 import java.io.IOException;
 
 public class MenuPanel extends JPanel {
-    public Image menuImage = ImageIO.read(new File("data//Menu_Image.jpg"));
+    public Image menuImage = ImageIO.read(MenuPanel.class.getResourceAsStream("Menu_Image.jpg"));
 
 
     public MenuPanel() throws IOException {

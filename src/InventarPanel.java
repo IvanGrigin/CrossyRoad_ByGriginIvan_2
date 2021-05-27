@@ -6,16 +6,16 @@ import java.io.IOException;
 
 public class InventarPanel {
     public boolean isOn = false;
-    public ClickObject character_01 = new ClickObject(50,50,30,30,ImageIO.read(new File("data//Character//Character (1).png")));
-    public ClickObject character_02 = new ClickObject(100,50,30,30,ImageIO.read(new File("data//Character//Character (2).png")));
-    public ClickObject character_03 = new ClickObject(150,50,30,30,ImageIO.read(new File("data//Character//Character (3).png")));
-    public ClickObject character_04 = new ClickObject(200,50,30,30,ImageIO.read(new File("data//Character//Character (4).png")));
-    public ClickObject character_05 = new ClickObject(250,50,30,30,ImageIO.read(new File("data//Character//Character (5).png")));
-    public ClickObject character_06 = new ClickObject(300,50,30,30,ImageIO.read(new File("data//Character//Character (6).png")));
-    public ClickObject character_07 = new ClickObject(350,50,30,30,ImageIO.read(new File("data//Character//Character (7).png")));
-    public ClickObject character_08 = new ClickObject(400,50,30,30,ImageIO.read(new File("data//Character//Character (8).png")));
-    public ClickObject character_09 = new ClickObject(450,50,30,30,ImageIO.read(new File("data//Character//Character (9).png")));
-    public ClickObject exit = new ClickObject(150,100,250,130,ImageIO.read(new File("data//Menu.png")));
+    public ClickObject character_01 = new ClickObject(50,50,30,30,ImageIO.read(InventarPanel.class.getResourceAsStream("Character/Character(1).png")));
+    public ClickObject character_02 = new ClickObject(100,50,30,30,ImageIO.read(InventarPanel.class.getResourceAsStream("Character/Character(2).png")));
+    public ClickObject character_03 = new ClickObject(150,50,30,30,ImageIO.read(InventarPanel.class.getResourceAsStream("Character/Character(3).png")));
+    public ClickObject character_04 = new ClickObject(200,50,30,30,ImageIO.read(InventarPanel.class.getResourceAsStream("Character/Character(4).png")));
+    public ClickObject character_05 = new ClickObject(250,50,30,30,ImageIO.read(InventarPanel.class.getResourceAsStream("Character/Character(5).png")));
+    public ClickObject character_06 = new ClickObject(300,50,30,30,ImageIO.read(InventarPanel.class.getResourceAsStream("Character/Character(6).png")));
+    public ClickObject character_07 = new ClickObject(350,50,30,30,ImageIO.read(InventarPanel.class.getResourceAsStream("Character/Character(7).png")));
+    public ClickObject character_08 = new ClickObject(400,50,30,30,ImageIO.read(InventarPanel.class.getResourceAsStream("Character/Character(8).png")));
+    public ClickObject character_09 = new ClickObject(450,50,30,30,ImageIO.read(InventarPanel.class.getResourceAsStream("Character/Character(9).png")));
+    public ClickObject exit = new ClickObject(150,100,250,130,ImageIO.read(InventarPanel.class.getResourceAsStream("Menu.png")));
 
     public InventarPanel() throws IOException {
     }

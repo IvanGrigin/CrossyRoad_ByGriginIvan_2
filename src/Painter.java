@@ -8,62 +8,62 @@ public class Painter {
     // Character
     public ArrayList<Image> characters = new ArrayList<>();
     // Level 01 - 03
-    public Image level_0103_background_up = ImageIO.read(new File("data//Level_01-03//Background_up.png"));
-    public Image level_0103_background_down = ImageIO.read(new File("data//Level_01-03//Background_down.png"));
-    public Image level_0103_river = ImageIO.read(new File("data//Level_01-03//River.png"));
-    public Image level_0103_bridge = ImageIO.read(new File("data//Level_01-03//Bridge.png"));
-    public Image level_0103_lily = ImageIO.read(new File("data//Level_01-03//Lily.png"));
-    public Image level_0103_road = ImageIO.read(new File("data//Level_01-03//Road.png"));
+    public Image level_0103_background_up = ImageIO.read(Painter.class.getResourceAsStream("Level_01-03/Background_up.png"));
+    public Image level_0103_background_down = ImageIO.read(Painter.class.getResourceAsStream("Level_01-03/Background_down.png"));
+    public Image level_0103_river = ImageIO.read(Painter.class.getResourceAsStream("Level_01-03/River.png"));
+    public Image level_0103_bridge = ImageIO.read(Painter.class.getResourceAsStream("Level_01-03/Bridge.png"));
+    public Image level_0103_lily = ImageIO.read(Painter.class.getResourceAsStream("Level_01-03/Lily.png"));
+    public Image level_0103_road = ImageIO.read(Painter.class.getResourceAsStream("Level_01-03/Road.png"));
     public ArrayList<Image> level_0103_cars = new ArrayList<>();
     public ArrayList<Image> level_0103_forest = new ArrayList<>();
 
     // Level 04 - 06
-    public Image level_0406_background_up = ImageIO.read(new File("data//Level_04-06//Background_up.png"));
-    public Image level_0406_background_down = ImageIO.read(new File("data//Level_04-06//Background_down.png"));
-    public Image level_0406_river = ImageIO.read(new File("data//Level_04-06//River.png"));
-    public Image level_0406_bridge = ImageIO.read(new File("data//Level_04-06//Bridge.png"));
-    public Image level_0406_lily = ImageIO.read(new File("data//Level_01-03//Lily.png"));
-    public Image level_0406_road = ImageIO.read(new File("data//Level_04-06//Road.png"));
+    public Image level_0406_background_up = ImageIO.read(Painter.class.getResourceAsStream("Level_04-06/Background_up.png"));
+    public Image level_0406_background_down = ImageIO.read(Painter.class.getResourceAsStream("Level_04-06/Background_down.png"));
+    public Image level_0406_river = ImageIO.read(Painter.class.getResourceAsStream("Level_04-06/River.png"));
+    public Image level_0406_bridge = ImageIO.read(Painter.class.getResourceAsStream("Level_04-06/Bridge.png"));
+    public Image level_0406_lily = ImageIO.read(Painter.class.getResourceAsStream("Level_01-03/Lily.png"));
+    public Image level_0406_road = ImageIO.read(Painter.class.getResourceAsStream("Level_04-06/Road.png"));
     public ArrayList<Image> level_0406_cars = new ArrayList<>();
     public ArrayList<Image> level_0406_forest = new ArrayList<>();
 
     // Level 07 - 09
-    public Image level_0709_background_up = ImageIO.read(new File("data//Level_07-09//Background_up.png"));
-    public Image level_0709_background_down = ImageIO.read(new File("data//Level_07-09//Background_down.png"));
-    public Image level_0709_river = ImageIO.read(new File("data//Level_07-09//River.png"));
-    public Image level_0709_bridge = ImageIO.read(new File("data//Level_07-09//Bridge.png"));
-    public Image level_0709_lily = ImageIO.read(new File("data//Level_07-09//Lily.png"));
-    public Image level_0709_road = ImageIO.read(new File("data//Level_07-09//Road.png"));
+    public Image level_0709_background_up = ImageIO.read(Painter.class.getResourceAsStream("Level_07-09/Background_up.png"));
+    public Image level_0709_background_down = ImageIO.read(Painter.class.getResourceAsStream("Level_07-09/Background_down.png"));
+    public Image level_0709_river = ImageIO.read(Painter.class.getResourceAsStream("Level_07-09/River.png"));
+    public Image level_0709_bridge = ImageIO.read(Painter.class.getResourceAsStream("Level_07-09/Bridge.png"));
+    public Image level_0709_lily = ImageIO.read(Painter.class.getResourceAsStream("Level_07-09/Lily.png"));
+    public Image level_0709_road = ImageIO.read(Painter.class.getResourceAsStream("Level_07-09/Road.png"));
     public ArrayList<Image> level_0709_cars = new ArrayList<>();
     public ArrayList<Image> level_0709_forest = new ArrayList<>();
 
     // Level 10 - 12
-    public Image level_1012_background_up = ImageIO.read(new File("data//Level_10-12//Background_up.png"));
-    public Image level_1012_background_down = ImageIO.read(new File("data//Level_10-12//Background_down.png"));
-    public Image level_1012_river = ImageIO.read(new File("data//Level_10-12//River.png"));
-    public Image level_1012_bridge = ImageIO.read(new File("data//Level_10-12//Bridge.png"));
-    public Image level_1012_lily = ImageIO.read(new File("data//Level_10-12//Lily.png"));
-    public Image level_1012_road = ImageIO.read(new File("data//Level_10-12//Road.png"));
+    public Image level_1012_background_up = ImageIO.read(Painter.class.getResourceAsStream("Level_10-12/Background_up.png"));
+    public Image level_1012_background_down = ImageIO.read(Painter.class.getResourceAsStream("Level_10-12/Background_down.png"));
+    public Image level_1012_river = ImageIO.read(Painter.class.getResourceAsStream("Level_10-12/River.png"));
+    public Image level_1012_bridge = ImageIO.read(Painter.class.getResourceAsStream("Level_10-12/Bridge.png"));
+    public Image level_1012_lily = ImageIO.read(Painter.class.getResourceAsStream("Level_10-12/Lily.png"));
+    public Image level_1012_road = ImageIO.read(Painter.class.getResourceAsStream("Level_10-12/Road.png"));
     public ArrayList<Image> level_1012_cars = new ArrayList<>();
     public ArrayList<Image> level_1012_forest = new ArrayList<>();
 
     // Level 13 - 15
-    public Image level_1315_background_up = ImageIO.read(new File("data//Level_13-15//Background_up.png"));
-    public Image level_1315_background_down = ImageIO.read(new File("data//Level_13-15//Background_down.png"));
-    public Image level_1315_river = ImageIO.read(new File("data//Level_13-15//River.png"));
-    public Image level_1315_bridge = ImageIO.read(new File("data//Level_13-15//Bridge.png"));
-    public Image level_1315_lily = ImageIO.read(new File("data//Level_13-15//Lily.png"));
-    public Image level_1315_road = ImageIO.read(new File("data//Level_13-15//Road.png"));
+    public Image level_1315_background_up = ImageIO.read(Painter.class.getResourceAsStream("Level_13-15/Background_up.png"));
+    public Image level_1315_background_down = ImageIO.read(Painter.class.getResourceAsStream("Level_13-15/Background_down.png"));
+    public Image level_1315_river = ImageIO.read(Painter.class.getResourceAsStream("Level_13-15/River.png"));
+    public Image level_1315_bridge = ImageIO.read(Painter.class.getResourceAsStream("Level_13-15/Bridge.png"));
+    public Image level_1315_lily = ImageIO.read(Painter.class.getResourceAsStream("Level_13-15/Lily.png"));
+    public Image level_1315_road = ImageIO.read(Painter.class.getResourceAsStream("Level_13-15/Road.png"));
     public ArrayList<Image> level_1315_cars = new ArrayList<>();
     public ArrayList<Image> level_1315_forest = new ArrayList<>();
 
     // Level 16 - 18
-    public Image level_1618_background_up = ImageIO.read(new File("data//Level_16-18//Background_up.png"));
-    public Image level_1618_background_down = ImageIO.read(new File("data//Level_16-18//Background_down.png"));
-    public Image level_1618_river = ImageIO.read(new File("data//Level_16-18//River.png"));
-    public Image level_1618_bridge = ImageIO.read(new File("data//Level_16-18//Bridge.png"));
-    public Image level_1618_lily = ImageIO.read(new File("data//Level_16-18//Lily.png"));
-    public Image level_1618_road = ImageIO.read(new File("data//Level_16-18//Road.png"));
+    public Image level_1618_background_up = ImageIO.read(Painter.class.getResourceAsStream("Level_16-18/Background_up.png"));
+    public Image level_1618_background_down = ImageIO.read(Painter.class.getResourceAsStream("Level_16-18/Background_down.png"));
+    public Image level_1618_river = ImageIO.read(Painter.class.getResourceAsStream("Level_16-18/River.png"));
+    public Image level_1618_bridge = ImageIO.read(Painter.class.getResourceAsStream("Level_16-18/Bridge.png"));
+    public Image level_1618_lily = ImageIO.read(Painter.class.getResourceAsStream("Level_16-18/Lily.png"));
+    public Image level_1618_road = ImageIO.read(Painter.class.getResourceAsStream("Level_16-18/Road.png"));
     public ArrayList<Image> level_1618_cars = new ArrayList<>();
     public ArrayList<Image> level_1618_forest = new ArrayList<>();
 
@@ -71,74 +71,73 @@ public class Painter {
     public Painter() throws IOException {
         // Characters
         for (int i = 1; i < 10; i++){
-            characters.add(ImageIO.read(new File("data//Character//Character ("+i+").png")));
+            characters.add(ImageIO.read(Painter.class.getResourceAsStream("Character/Character("+i+").png")));
         }
 
         // Level 01 - 03
         for (int i = 1; i < 10; i++){
-            level_0103_cars.add(ImageIO.read(new File("data//Level_01-03//Cars//Car ("+i+").png")));
+            level_0103_cars.add(ImageIO.read(Painter.class.getResourceAsStream("Level_01-03/Cars/Car_(0"+i+").png")));
         }
         for (int i = 10; i < 50; i++){
-            level_0103_cars.add(ImageIO.read(new File("data//Level_01-03//Cars//Car ("+i+").png")));
+            level_0103_cars.add(ImageIO.read(Painter.class.getResourceAsStream("Level_01-03/Cars/Car_("+i+").png")));
         }
         for (int i = 1; i < 4; i++){
-            level_0103_forest.add(ImageIO.read(new File("data//Level_01-03//Forest//Forest ("+i+").png")));
+            level_0103_forest.add(ImageIO.read(Painter.class.getResourceAsStream("Level_01-03/Forest/Forest_("+i+").png")));
         }
 
         // Level 04 - 06
         for (int i = 1; i < 10; i++){
-            level_0406_cars.add(ImageIO.read(new File("data//Level_04-06//Cars//Car ("+i+").png")));
+            level_0406_cars.add(ImageIO.read(Painter.class.getResourceAsStream("Level_04-06/Cars/Car_(0"+i+").png")));
         }
         for (int i = 10; i < 50; i++){
-            level_0406_cars.add(ImageIO.read(new File("data//Level_04-06//Cars//Car ("+i+").png")));
+            level_0406_cars.add(ImageIO.read(Painter.class.getResourceAsStream("Level_04-06/Cars/Car_("+i+").png")));
         }
         for (int i = 1; i < 4; i++){
-            level_0406_forest.add(ImageIO.read(new File("data//Level_04-06//Forest//Forest ("+i+").png")));
+            level_0406_forest.add(ImageIO.read(Painter.class.getResourceAsStream("Level_04-06/Forest/Forest_("+i+").png")));
         }
         // Level 07 - 09
         for (int i = 1; i < 10; i++){
-            level_0709_cars.add(ImageIO.read(new File("data//Level_07-09//Cars//Car ("+i+").png")));
+            level_0709_cars.add(ImageIO.read(Painter.class.getResourceAsStream("Level_07-09/Cars/Car_(0"+i+").png")));
         }
         for (int i = 10; i < 50; i++){
-            level_0709_cars.add(ImageIO.read(new File("data//Level_07-09//Cars//Car ("+i+").png")));
+            level_0709_cars.add(ImageIO.read(Painter.class.getResourceAsStream("Level_07-09/Cars/Car_("+i+").png")));
         }
         for (int i = 1; i < 4; i++){
-            level_0709_forest.add(ImageIO.read(new File("data//Level_07-09//Forest//Forest ("+i+").png")));
+            level_0709_forest.add(ImageIO.read(Painter.class.getResourceAsStream("Level_07-09/Forest/Forest_("+i+").png")));
         }
 
         // Level 10 - 12
         for (int i = 1; i < 10; i++){
-            level_1012_cars.add(ImageIO.read(new File("data//Level_10-12//Cars//Car ("+i+").png")));
+            level_1012_cars.add(ImageIO.read(Painter.class.getResourceAsStream("Level_10-12/Cars/Car_(0"+i+").png")));
         }
         for (int i = 10; i < 50; i++){
-            level_1012_cars.add(ImageIO.read(new File("data//Level_10-12//Cars//Car ("+i+").png")));
+            level_1012_cars.add(ImageIO.read(Painter.class.getResourceAsStream("Level_10-12/Cars/Car_("+i+").png")));
         }
         for (int i = 1; i < 4; i++){
-            level_1012_forest.add(ImageIO.read(new File("data//Level_10-12//Forest//Forest ("+i+").png")));
+            level_1012_forest.add(ImageIO.read(Painter.class.getResourceAsStream("Level_10-12/Forest/Forest_("+i+").png")));
         }
 
         // Level 13 - 15
         for (int i = 1; i < 10; i++){
-            level_1315_cars.add(ImageIO.read(new File("data//Level_13-15//Cars//Car ("+i+").png")));
+            level_1315_cars.add(ImageIO.read(Painter.class.getResourceAsStream("Level_13-15/Cars/Car_(0"+i+").png")));
         }
         for (int i = 10; i < 50; i++){
-            level_1315_cars.add(ImageIO.read(new File("data//Level_13-15//Cars//Car ("+i+").png")));
+            level_1315_cars.add(ImageIO.read(Painter.class.getResourceAsStream("Level_13-15/Cars/Car_("+i+").png")));
         }
         for (int i = 1; i < 4; i++){
-            level_1315_forest.add(ImageIO.read(new File("data//Level_13-15//Forest//Forest ("+i+").png")));
+            level_1315_forest.add(ImageIO.read(Painter.class.getResourceAsStream("Level_13-15/Forest/Forest_("+i+").png")));
         }
 
         // Level 16 - 18
         for (int i = 1; i < 10; i++){
-            level_1618_cars.add(ImageIO.read(new File("data//Level_16-18//Cars//Car ("+i+").png")));
+            level_1618_cars.add(ImageIO.read(Painter.class.getResourceAsStream("Level_16-18/Cars/Car_(0"+i+").png")));
         }
         for (int i = 10; i < 50; i++){
-            level_1618_cars.add(ImageIO.read(new File("data//Level_16-18//Cars//Car ("+i+").png")));
+            level_1618_cars.add(ImageIO.read(Painter.class.getResourceAsStream("Level_16-18/Cars/Car_("+i+").png")));
         }
         for (int i = 1; i < 4; i++){
-            level_1618_forest.add(ImageIO.read(new File("data//Level_16-18//Forest//Forest ("+i+").png")));
+            level_1618_forest.add(ImageIO.read(Painter.class.getResourceAsStream("Level_16-18/Forest/Forest_("+i+").png")));
         }
-
     }
 
 

@@ -5,13 +5,13 @@ import java.io.File;
 import java.io.IOException;
 
 public class ChoicePanel {
-    public ClickObject back_to_menu = new ClickObject(20,35,250,150, ImageIO.read(new File("data//Menu.png")));
-    public ClickObject go_to_game = new ClickObject(330,35,250,150, ImageIO.read(new File("data//Start.png")));
-    public ClickObject choice_01 = new ClickObject(50,200,500,100,ImageIO.read(new File("data//Level_01-03//Start_Image.png")));
-    public ClickObject choice_04 = new ClickObject(50,350,500,100,ImageIO.read(new File("data//Level_04-06//Start_Image.png")));
-    public ClickObject choice_07 = new ClickObject(50,500,500,100,ImageIO.read(new File("data//Level_07-09//Start_Image.png")));
-    public ClickObject choice_10 = new ClickObject(50,650,500,100,ImageIO.read(new File("data//Level_10-12//Start_Image.png")));
-    public ClickObject choice_13 = new ClickObject(50,800,500,100,ImageIO.read(new File("data//Level_13-15//Start_Image.png")));
+    public ClickObject back_to_menu = new ClickObject(20,35,250,150, ImageIO.read(ChoicePanel.class.getResourceAsStream("Menu.png")));
+    public ClickObject go_to_game = new ClickObject(330,35,250,150, ImageIO.read(ChoicePanel.class.getResourceAsStream("Start.png")));
+    public ClickObject choice_01 = new ClickObject(50,200,500,100,ImageIO.read(ChoicePanel.class.getResourceAsStream("Level_01-03/Start_Image.png")));
+    public ClickObject choice_04 = new ClickObject(50,350,500,100,ImageIO.read(ChoicePanel.class.getResourceAsStream("Level_04-06/Start_Image.png")));
+    public ClickObject choice_07 = new ClickObject(50,500,500,100,ImageIO.read(ChoicePanel.class.getResourceAsStream("Level_07-09/Start_Image.png")));
+    public ClickObject choice_10 = new ClickObject(50,650,500,100,ImageIO.read(ChoicePanel.class.getResourceAsStream("Level_10-12/Start_Image.png")));
+    public ClickObject choice_13 = new ClickObject(50,800,500,100,ImageIO.read(ChoicePanel.class.getResourceAsStream("Level_13-15/Start_Image.png")));
 
     public ChoicePanel() throws IOException {
 

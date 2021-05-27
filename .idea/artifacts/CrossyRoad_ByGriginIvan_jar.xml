@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="CrossyRoad_ByGriginIvan:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/CrossyRoad_ByGriginIvan_jar</output-path>
+    <root id="archive" name="CrossyRoad_ByGriginIvan.jar">
+      <element id="module-output" name="CrossyRoad_ByGriginIvan" />
+    </root>
+  </artifact>
+</component>
